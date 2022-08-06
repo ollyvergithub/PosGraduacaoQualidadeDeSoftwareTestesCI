@@ -36,5 +36,5 @@ jobs:
           cache: 'npm'
           cache-dependency-path: user-api/package-lock.json
       - run: npm ci
-      - run: npm run audit
+      - run: npm audit
 
