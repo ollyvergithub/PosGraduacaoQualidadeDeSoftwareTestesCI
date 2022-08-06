@@ -14,12 +14,21 @@ jobs:
     name: Análise estática
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 16.x
-          cache: 'npm'
-          cache-dependency-path: 'user-api/package-lock.json'
+          node-version: "16.x"
+
+      - name: Prepare cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - run: npm ci
       - run: npm run lint
