@@ -1,0 +1,14 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+/_material
+/.idea
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+package-lock.json
+.vscode/
+
+/user-api/node_modules/
+/user-admin/node_modules/

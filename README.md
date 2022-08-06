@@ -14,7 +14,18 @@ II. Instale as dependências.
 $ npm i
 ```
 
-III. Rode a aplicação e Execute os testes.
+III. Execute os testes.
+
+```console
+cd user-api
+$ npm test
+
+cd user-admin
+$ npm test
+$ npm run cypress:open
+```
+
+IV. Rode a aplicação.
 
 ```console
 cd user-api
