@@ -7,7 +7,6 @@
 /node_modules
 /.pnp
 .pnp.js
-package-lock.json
 .vscode/
 
 /user-api/node_modules/
