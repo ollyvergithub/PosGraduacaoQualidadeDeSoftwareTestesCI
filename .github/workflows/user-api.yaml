@@ -21,6 +21,6 @@ jobs:
           node-version: 16.x
           check-latest: true
           cache: 'npm'
-          cache-dependency-path: user-api/package-lock.json
+          cache-dependency-path: /user-api/package-lock.json
       - run: npm install
       - run: npm run lint
